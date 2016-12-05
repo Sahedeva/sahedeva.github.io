@@ -289,14 +289,14 @@ footer {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center center;
+  background-position: 0px -115px;
   background-image: url('../img/footer.jpg');
   text-align: center;
   color: white;
 }
 footer .footer-content {
   padding: 1px 50px;
-  text-align: center;
+  text-align: right;
   width: 100%;
 }
 footer .footer-content .footer-content-inner h1 {
