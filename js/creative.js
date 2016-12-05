@@ -28,7 +28,7 @@
     });
 
     $('#cvdgit').click(function(event) {
-      window.open('https://github.com/Sahedeva/sahedeva.github.io', '_blank');
+      window.open('https://github.com/Sahedeva/catsvsdogs', '_blank');
       return false;
     });
 
@@ -59,7 +59,7 @@
     });
 
     $('#cvd').click(function(event) {
-      window.open('http://Sahedeva.github.io', '_blank');
+      window.open('http://sahedeva.github.io/catsvsdogs', '_blank');
       return false;
     });
 

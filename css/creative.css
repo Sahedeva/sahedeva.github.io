@@ -61,20 +61,52 @@ aside {
 .no-padding {
   padding: 0;
 }
-.navbar.center .navbar-inner {
-  text-align: center;
+.brandSpan {
+  position: absolute;
+  left: 85px;
+  top: 16px;
 }
-.navbar.center .navbar-inner .nav {
-  display: inline-block;
-  float: none;
+@media (max-width: 770px) {
+  .brandSpan {
+    color: white;
+  }
+}
+.brandImg {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+.affix {
+  background-color: white;
 }
 .navbar-default {
-  background-color: rgba(0, 0, 240, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
+  max-height: 50px;
+}
+.navbar-default.affix {
+  background-color: #A0A0A0;
+  border-color: rgba(34, 34, 34, 0.05);
+}
+.navbar-default.affix .navbar-header .navbar-brand {
+  color: #F05F40;
+  font-size: 14px;
+}
+.navbar-default.affix .navbar-header .navbar-brand:hover,
+.navbar-default.affix .navbar-header .navbar-brand:focus {
+  color: #eb3812;
+}
+.navbar-default.affix .nav > li > a,
+.navbar-default.affix .nav > li > a:focus {
+  color: #222222;
+}
+.navbar-default.affix .nav > li > a:hover,
+.navbar-default.affix .nav > li > a:focus:hover {
+  color: #F05F40;
 }
 .navbar-default .navbar-header .navbar-brand {
   color: #F05F40;
@@ -105,16 +137,36 @@ aside {
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #F05F40 !important;
+  color: #F05F40;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
+.navbar-default .nav > li.affix {
+  background-color: white;
+  border-color: rgba(34, 34, 34, 0.05);
+}
+.navbar-default .nav > li.affix .navbar-header .navbar-brand {
+  color: #F05F40;
+  font-size: 14px;
+}
+.navbar-default .nav > li.affix .navbar-header .navbar-brand:hover,
+.navbar-default .nav > li.affix .navbar-header .navbar-brand:focus {
+  color: #eb3812;
+}
+.navbar-default .nav > li.affix .nav > li > a,
+.navbar-default .nav > li.affix .nav > li > a:focus {
+  color: #222222;
+}
+.navbar-default .nav > li.affix .nav > li > a:hover,
+.navbar-default .nav > li.affix .nav > li > a:focus:hover {
+  color: #F05F40;
+}
 @media (min-width: 768px) {
   .navbar-default {
-    background-color: rgba(0, 0, 240, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 255, 255, 0.3);
   }
   .navbar-default .navbar-header .navbar-brand {
@@ -151,6 +203,20 @@ aside {
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #F05F40;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .collapsing,
+  .in {
+    background-color: #f7f7f7;
+  }
+  .collapsing ul li a,
+  .in ul li a {
+    color: #555!important;
+  }
+  .collapsing ul li a:hover,
+  .in ul li a:hover {
+    color: #eb3812 !important;
   }
 }
 header {
@@ -223,15 +289,14 @@ footer {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: 0px -350px;
+  background-position: center center;
   background-image: url('../img/footer.jpg');
   text-align: center;
   color: white;
 }
 footer .footer-content {
-  position: relative;
+  padding: 1px 50px;
   text-align: center;
-  padding: 100px 15px 100px;
   width: 100%;
 }
 footer .footer-content .footer-content-inner h1 {
@@ -243,8 +308,6 @@ footer .footer-content .footer-content-inner h1 {
 }
 @media (min-width: 768px) {
   footer .footer-content {
-    position: absolute;
-    top: 2%;
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
