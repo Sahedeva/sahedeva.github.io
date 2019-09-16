@@ -47,6 +47,11 @@
       return false;
     });
 
+    $('#growlrrgit').click(function(event) {
+      window.open('https://github.com/Sahedeva/growlrr', '_blank');
+      return false;
+    });
+
     // App links on click
     $('#collegetracker').click(function(event) {
       window.open('https://dry-tundra-9497.herokuapp.com/', '_blank');
@@ -75,6 +80,11 @@
 
     $('#marssim').click(function(event) {
       window.open('https://cryptic-basin-28088.herokuapp.com/', '_blank');
+      return false;
+    });
+
+    $('#growlrr').click(function(event) {
+      window.open('https://growlrrpublic.herokuapp.com/', '_blank');
       return false;
     });
 
